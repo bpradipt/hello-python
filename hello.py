@@ -6,6 +6,8 @@ app = Flask(__name__)
 
 @app.route('/', methods=['GET', 'POST'])
 def hello():
+    #print the request Body
+    print request.values.get('Body')
     """Respond to incoming calls with a simple text message."""
     resp = twilio.twiml.Response()
     resp.message("Hello, This is Pradipta's Twilio Acc")
